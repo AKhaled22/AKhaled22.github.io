@@ -103,6 +103,7 @@ function maintetnanceEvent(){
     }
 
     let differenceCBG = currCBG - prevCBG 
+    let y=0
     if(currCBG<100){
         resultsElement.textContent = "DC insulin and give 100 mL D10, recheck every 15 minutes"
 
@@ -112,8 +113,9 @@ function maintetnanceEvent(){
             resultsElement.textContent = "No Change"
 
         }else if(differenceCBG<=0 && differenceCBG>=-20){
+            y=(Number(currRate) - delta)
 
-            resultsElement.textContent = "Decrease rate to " + (currRate - delta) + " ml/hr"
+            resultsElement.textContent = "Decrease rate to " + (y) + " ml/hr"
 
         }else{
             resultsElement.textContent = "DC insulin -> CBG/30 min -> when CBG > 140 mg/dL -> restart at rate =  " + (roundHalf(0.75*currRate)) + " ml/hr"
@@ -122,18 +124,20 @@ function maintetnanceEvent(){
 
     }else if(currCBG==140){
         if(differenceCBG>40){
-            resultsElement.textContent = "Increase rate to " +(currRate+ delta) + " ml/hr"
-
+            y=(Number(currRate)+ delta)
+            resultsElement.textContent = "Increase rate to " +y + " ml/hr"
         }else if(differenceCBG>=-20){
             resultsElement.textContent = "No Change"
             
 
         }else if(differenceCBG>=-40){
-            resultsElement.textContent = "Decrease rate to " + (currRate - delta) + " ml/hr"
+            y=(Number(currRate) - delta)
+            resultsElement.textContent = "Decrease rate to " + y + " ml/hr"
 
 
         }else{
-            resultsElement.textContent = "Hold infusion for 30 minutes then decrease rate to " + (currRate-2*delta) + " ml/hr"
+           y= (Number(currRate)-2*delta)
+            resultsElement.textContent = "Hold infusion for 30 minutes then decrease rate to " + y + " ml/hr"
 
 
         }
@@ -141,10 +145,12 @@ function maintetnanceEvent(){
     }else if(currCBG<=200){
 
         if(differenceCBG>60){
-            resultsElement.textContent = "Increase rate to " + (currRate + 2*delta) + " ml/hr"
+            y=(Number(currRate) + 2*delta)
+            resultsElement.textContent = "Increase rate to " + y + " ml/hr"
 
         }else if(differenceCBG>=0){
-            resultsElement.textContent = "Increase rate to " +(currRate+ delta) + " ml/hr"
+            y=(Number(currRate)+ delta)
+            resultsElement.textContent = "Increase rate to " +y + " ml/hr"
             
 
         }else if(differenceCBG>=-40){
@@ -152,21 +158,25 @@ function maintetnanceEvent(){
 
 
         }else if(differenceCBG>=-60){
-            resultsElement.textContent = "Decrease rate to " + (currRate - delta) + " ml/hr"
+            y= (Number(currRate) - delta) 
+            resultsElement.textContent = "Decrease rate to " +y+ " ml/hr"
 
 
         }else{
-            resultsElement.textContent = "Hold infusion for 30 minutes then decrease rate to " + (currRate - 2*delta) + " ml/hr"
+            y= (Number(currRate) - delta) 
+            resultsElement.textContent = "Hold infusion for 30 minutes then decrease rate to " + y + " ml/hr"
 
 
         }
 
     }else{
         if(differenceCBG>0){
-            resultsElement.textContent = "Increase rate to " + (currRate + 2*delta) + " ml/hr"
+            y=(Number(currRate) + 2*delta)
+            resultsElement.textContent = "Increase rate to " + y + " ml/hr"
 
         }else if(differenceCBG>=-20){
-            resultsElement.textContent = "Increase rate to " +(currRate+ delta) +" ml/hr"
+            y=(Number(currRate)+ delta)
+            resultsElement.textContent = "Increase rate to " +y +" ml/hr"
             
 
         }else if(differenceCBG>=-60){
@@ -174,11 +184,13 @@ function maintetnanceEvent(){
 
 
         }else if(differenceCBG>=-80){
-            resultsElement.textContent = "Decrease rate to "+ (currRate - delta) +" ml/hr"
+            y=(Number(currRate) - delta)
+            resultsElement.textContent = "Decrease rate to "+ y +" ml/hr"
 
 
         }else{
-            resultsElement.textContent = "Hold infusion for 30 minutes then decrease rate to " + (currRate - 2*delta) + " ml/hr"
+            y=(Number(currRate) - 2*delta)
+            resultsElement.textContent = "Hold infusion for 30 minutes then decrease rate to " + y + " ml/hr"
 
 
         }
