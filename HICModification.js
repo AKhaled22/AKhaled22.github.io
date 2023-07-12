@@ -52,11 +52,17 @@ function HICModificationEvent() {
         aptt.style.borderColor = ""
 
     }
-    if (!currRateH.value) {
+    const warning = document.querySelector(".OyEIQ")
+
+    if (!currRateH.value || currRateH.value<1 || currRateH.value>20) {
         currRateH.style.borderColor = "red"
         x = 1
+        if(currRateH.value>20){
+            warning.style.display = "flex"
+        }
     } else {
         currRateH.style.borderColor = ""
+        warning.style.display = "none"
     }
     if (x == 1) {
 
