@@ -180,6 +180,34 @@ a {
     border-radius:5px;
   }
 
+  .SdBahf.Jj6Lae .OyEIQ {
+    color: red;
+}
+
+.OyEIQ {
+    /* display: -webkit-box;
+    display: -webkit-flex;*/
+    display: none;
+    font-size: 12px;
+    color: red;
+}
+
+.EjBTad{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+
+.SdBahf .OyEIQ {
+    /* color: #5f6368; */
+    margin-top: 4px;
+}
+
+.rate{
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
