@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIC Modification</title>
+</head>
+
+<body>
+    <div id="body">
+        <div class="navbar">
+
+            <div class="icon"><img src="vector-calculator-icon.jpg" alt="Calculator" class="imagcal" />
+            </div>
+            <div class="calcs">
+                <div class="dropdownList">
+                    <a href="IIC.html">
+                        <div class="IIC hovergreen">Insulin Infusion Calculator for Non-DKA
+                        </div>
+
+                    </a>
+                    <div class="dropdown-options">
+                        <a href="IICInitiation.html">Initiation</a>
+                        <a href="IICMaintenance.html">Maintenance</a>
+                      </div>
+                </div>
+                <div class="dropdownList">
+                    <a href="#">
+                        <div class="IIC hovergreen" style="color: green;">Heparin Infusion Calculator
+                        </div>
+
+                    </a>
+                    <div class="dropdown-options">
+                        <a href="HICInitialization.html">Initialization</a>
+                        <a href="HICModification.html" style="color: green;">Modification</a>
+                      </div>
+                </div>
+                <!-- <a href="HIC.html">
+                    <div class="HIC hovergreen" style="color: green;">Heparin Infusion Calculator</div>
+                </a> -->
+            </div>
+        </div>
+        <div id="inst">
+            <div class="instructions">
+                Initiate insulin infusion if 2 consecutive CBG more than 180 mg/dL
+            </div>
+            <div class="instructions">
+                Add 50 IU insulin + 50 cc Normal saline
+            </div>
+            <div class="instructions">
+                Before connecting, flush 20 cc infusion through all tubing
+            </div>
+        </div>
+        <div id="initiation">
+            <div class="init">Modification</div>
+            <div class="currcbg" style="text-align: center;">
+                <label class="labels">Body Weight (Kg)</label>
+
+                <input type="number" class="bWeight" required>
+
+            </div>
+            <div class="currcbg" style="text-align: center;">
+                <label class="labels">Height (Cm)</label>
+
+                <input type="number" class="heightt" required>
+
+            </div>
+            <div class="currcbg" style="text-align: center;">
+                <label class="labels">Gender (M/F)</label>
+
+                <select name="gender" id="gender">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+
+            </div>
+            <div class="currcbg" style="text-align: center;">
+                <label class="labels">aPTT (Secs)</label>
+
+                <input type="number" class="aptt" required>
+
+            </div>
+            <div class="currcbg" style="text-align: center;">
+                <label class="labels">Current Rate (m/hr)</label>
+
+                <input type="number" min="1" max="20" class="currRateH" required>
+
+
+            </div>
+            <div class="centeredbutton"><button class="blackbutt HICModificationbutton"
+                    style="margin-top: 1rem; margin-bottom: 1rem;">Calculate</button></div>
+
+
+
+
+            <!-- <div class="currcbg" style="text-align: center;">
+                <label style="margin-right: 3rem;">Initial Bolus (ml): </label>
+
+                <label class="initbResult" style="font-weight: bolder; color: green;"></label>
+
+            </div>
+
+            <div class="currcbg" style="text-align: center;">
+                <label style="margin-right: 3rem;">Initial Rate (ml/hr): </label>
+
+                <label class="initrResult" style="font-weight: bolder; color: green;"></label>
+
+            </div> -->
+        </div>
+
+
+
+
+        <div class="resultsheadline">Results: </div>
+
+        <div class="resultsHIC" ></div>
+        <div class="resultsHIC" ></div>
+
+
+
+
+
+
+
+    </div>
+    <script src="HICModification.js"></script>
+</body>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIC</title>
+</head>
+<body>
+    <div class="navbar">
+       
+        <div class="icon"><img src="vector-calculator-icon.jpg" alt="Calculator" class="imagcal"/>
+        </div>
+        <div class="calcs">
+            <!-- <a href="IIC.html">
+                <div class="IIC hovergreen" style="color: green;">Insulin Infusion Calculator for Non-DKA</div>
+            </a>
+            <a href="HIC.html">
+                <div class="HIC hovergreen">Heparin Infusion Calculator</div>
+            </a> -->
+            <div class="dropdownList">
+                <a href="#">
+                    <div class="IIC hovergreen" style="color: green;">Insulin Infusion Calculator for Non-DKA
+                    </div>
+
+                </a>
+                <div class="dropdown-options">
+                    <a href="IICInitiation.html" style="color: green;">Initiation</a>
+                    <a href="IICMaintenance.html">Maintenance</a>
+                  </div>
+            </div>
+            <div class="dropdownList">
+                <a href="#">
+                    <div class="IIC hovergreen">Heparin Infusion Calculator
+                    </div>
+
+                </a>
+                <div class="dropdown-options">
+                    <a href="HICInitialization.html" style="color: green;">Initialization</a>
+                    <a href="HICModification.html">Modification</a>
+                  </div>
+            </div>
+            <!-- <a href="HIC.html">
+                <div class="HIC hovergreen" style="color: green;">Heparin Infusion Calculator</div>
+            </a> -->
+        </div>
+        </div>
+    </div>
+    <div id="inst">
+        <div class="instructions">
+            Initiate insulin infusion if 2 consecutive CBG more than 180 mg/dL
+        </div>
+        <div class="instructions">
+            Add 50 IU insulin + 50 cc Normal saline
+        </div>
+        <div class="instructions">
+            Before connecting, flush 20 cc infusion through all tubing
+        </div>
+    </div>
+<div id="initiation">
+    <div class="init">Initiation</div>
+    <div class="currcbg" style="text-align: center;">
+        <label class="labels margright3 currCBGLabel"   >Current CBG (mg%)</label>
+
+        <input type="number" min="0" id="currCBGInit">
+        <button class="blackbutt initbutton">Calculate</button>
+
+    </div>
+
+    
+
+    <div class="currcbg" style="text-align: center;">
+        <label class="labelsResults margright3" >Initial Bolus (ml): </label>
+
+        <label class="initbResult"  style="font-weight: bolder;"></label>
+
+    </div>
+
+    <div class="currcbg" style="text-align: center;">
+        <label class="labelsResults margright3">Initial Rate (ml/hr): </label>
+
+        <label class="initrResult" style="font-weight: bolder;"></label>
+
+    </div>
+</div>
+
+
+
+    <!-- <div class="maint">Maintenance</div>
+    <div class="currcbg" style="text-align: center;">
+        <label class="labels margright2 " style="color: red;">Previous CBG (mg%)</label>
+
+        <input type="number" min="0" id="prevCBGMaint" required>
+        
+    </div>
+    <div class="currcbg" style="text-align: center;">
+        <label class="labels margright27 " style=" color: green;">Current CBG (mg%)</label>
+
+        <input type="number" min="0" id="currCBGMaint" required>
+        
+
+    </div>
+    
+    <div class="currcbg" style="text-align: center;">
+        <label class="labels margright3" >Current Rate (ml/hr)</label>
+
+        <input type="number" min="0" id="currRateMaint" required>
+        <div class="centeredbutton"><button class="blackbutt maintbutton" style="margin-top: 1rem;">Calculate</button></div>
+        
+    </div>
+    
+    <div class="resultsheadline">Results: </div>
+    <div class="results" style="color: green;"></div> -->
+
+
+
+
+
+<script src="IICInitiation.js"></script>
+</body>
