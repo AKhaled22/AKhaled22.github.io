@@ -2,8 +2,8 @@ body {
     height: 100%;
     margin: 0;
     background-color: #fff;
-    color: rgba(0,0,0,.87);
-    font-family: SoDoSans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    color: rgba(0, 0, 0, .87);
+    font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 1.5;
@@ -15,19 +15,19 @@ body {
 
 }
 
-.navbar{
-    height:101px;
-    width:100%;
+.navbar {
+    height: 101px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-    position:relative;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    position: relative;
     padding-left: 10px;
     padding-right: 20px;
-    
+
 }
 
 .imagcal {
@@ -37,32 +37,36 @@ body {
     /* margin-bottom: 50%; */
 
 }
-.calcs{
-    display:flex;
+
+.calcs {
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width:95%;
-    
+    width: 95%;
+
 }
 
-.hovergreen:hover{
+.hovergreen:hover {
     color: green;
 }
 
-.icon{
+.icon {
     width: 5%;
 }
 
-.IIC , .HIC {
+.IIC,
+.HIC {
     margin-right: 10px;
     font-size: 1.4rem;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
-.init , .maint{
+
+.init,
+.maint {
     width: 100%;
     font-size: 3rem;
     font-weight: bold;
@@ -70,27 +74,29 @@ a{
     margin: 0.5rem;
 }
 
-.blackbutt{
+.blackbutt {
     background-color: black;
-    color:#fff;
+    color: #fff;
     border-radius: 40cm;
     padding: 6px 15px 6px 15px;
     border: 1px solid black;
 
 
 }
-.blackbutt:hover{
-    opacity: 0.7 ;
+
+.blackbutt:hover {
+    opacity: 0.7;
 
 }
 
-.centeredbutton{
+.centeredbutton {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-.resultsheadline{
+
+.resultsheadline {
     width: 100%;
     font-size: 2rem;
     font-weight: bold;
@@ -98,8 +104,8 @@ a{
     margin-top: 1.5rem;
 }
 
-.results{
-    color:green;
+.resultsHIC ,.resultsIIC {
+    color: green;
     width: 100%;
     font-size: 2rem;
     font-weight: 400;
@@ -108,20 +114,22 @@ a{
 
 }
 
-.labels{
+.labels {
     margin-right: 3rem;
 }
 
-.initbutton{
+.initbutton {
     margin-left: 3rem;
 }
-#inst{
+
+#inst {
     width: 100%;
     margin-top: 2rem;
     margin-bottom: 2rem;
 
 }
-.instructions{
+
+.instructions {
     text-align: center;
     text-decoration: solid;
     font-size: large;
@@ -129,16 +137,50 @@ a{
     margin: 5px;
 }
 
-.margright3{
+.margright3 {
     margin-right: 3rem;
 }
-.margright2{
+
+.margright2 {
     margin-right: 2rem;
 }
-.margright27{
+
+.margright27 {
     margin-right: 2.7rem;
 
 }
+
+.dropdownList {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 100%;
+}
+.dropdownList:hover  .dropdown-options {
+    display: block;
+  }
+  
+  .dropdown-options a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+    padding:20px 40px;
+  }
+  
+  .dropdown-options a:hover {
+    color: #0a0a23;
+    background-color: #ddd;
+    border-radius:5px;
+  }
 
 @media screen and (max-width: 768px) {
     .navbar {
@@ -155,46 +197,61 @@ a{
         align-items: center;
     }
 
-    .IIC, .HIC {
+    .IIC,
+    .HIC {
         margin-left: 10px;
         margin-bottom: 10px;
         text-align: center;
     }
+
     #initiation {
         margin: 1rem;
     }
 
     .currcbg input,
     .currcbg select {
-        width: 100%;
+        width: 50%;
         max-width: 100%;
     }
 
-    .labels{
+    .labels {
+        margin-bottom: 1rem;
         margin-right: 0;
+        margin-top: 1rem;
     }
 
-    .init, .maint {
+    .init,
+    .maint {
         margin: 0;
     }
-    .initbutton{
+
+    .initbutton {
         margin-left: 0;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
-    #inst{
+
+    #inst {
 
         margin: 0;
         margin-top: 1.7rem;
-    
+
     }
-    
+
+    .currcbg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* .currCBGLabel{
+        margin-bottom: 16px;
+    } */
+
+    .labelsResults {
+        margin-top: 1rem;
+        margin-right: 0;
+    }
+
 }
-
-
-
-
-
-
-
-
