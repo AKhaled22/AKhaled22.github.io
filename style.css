@@ -152,7 +152,6 @@ a {
 
 .dropdownList {
     display: inline-block;
-    position: relative;
 }
 
 .dropdown-options {
@@ -162,7 +161,6 @@ a {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-    width: 100%;
 }
 .dropdownList:hover  .dropdown-options {
     display: block;
