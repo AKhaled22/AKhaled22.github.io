@@ -198,7 +198,6 @@ a {
     .IIC,
     .HIC {
         margin-left: 10px;
-        margin-bottom: 10px;
         text-align: center;
     }
 
@@ -250,6 +249,10 @@ a {
     .labelsResults {
         margin-top: 1rem;
         margin-right: 0;
+    }
+
+    .dropdownList {
+        width:80%;
     }
 
 }
