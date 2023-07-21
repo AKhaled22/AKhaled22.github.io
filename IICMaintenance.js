@@ -111,7 +111,7 @@ function maintetnanceEvent() {
     let differenceCBG = currCBG - prevCBG
     let y = 0
     if (currCBG < 100) {
-        resultsElement.textContent = "DC insulin and give 100 mL D10, recheck every 15 minutes, when CBG > 100 mg%, wait for 1 hour and resume insulin by " + 0.5*currRateMaint.value + " m/hr"
+        resultsElement.textContent = "DC insulin and give 100 mL D10, recheck every 15 minutes, when CBG > 140 mg%, resume insulin by " + 0.5*currRateMaint.value + " m/hr"
 
     } else
         if (currCBG >= 100 && currCBG <= 139) {
