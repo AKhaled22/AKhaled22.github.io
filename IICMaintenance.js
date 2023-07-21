@@ -148,7 +148,7 @@ function maintetnanceEvent() {
 
             } else {
                 y = (Number(currRate) - 2 * delta)
-                resultsElement.textContent = "Hold infusion for 30 minutes then decrease rate to " + y + " ml/hr"
+                resultsElement.textContent = "Hold infusion, check CBG every every 30 minutes, when CBG > 140 ml/dL restart rate by " + y + " ml/hr"
 
 
             }
@@ -185,7 +185,7 @@ function maintetnanceEvent() {
 
             } else {
                 y = (Number(currRate) - delta)
-                resultsElement.textContent = "Hold infusion for 30 minutes then decrease rate to " + y + " ml/hr"
+                resultsElement.textContent = "Hold infusion, check CBG every every 30 minutes, when CBG > 140 ml/dL restart rate by " + y + " ml/hr"
 
 
             }
@@ -221,7 +221,7 @@ function maintetnanceEvent() {
 
             } else {
                 y = (Number(currRate) - 2 * delta)
-                resultsElement.textContent = "Hold infusion for 30 minutes then decrease rate to " + y + " ml/hr"
+                resultsElement.textContent = "Hold infusion, check CBG every every 30 minutes, when CBG > 140 ml/dL restart rate by " + y + " ml/hr"
 
 
             }
