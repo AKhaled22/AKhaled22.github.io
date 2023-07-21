@@ -74,14 +74,14 @@ function HICModificationEvent() {
         extraBolus = 80 * usedBW / 100
         changingRate = Math.round(4 * Number(usedBW) / 100 + Number(currRateH.value))
 
-    } else if (aptt.value < 45) {
+    } else if (aptt.value < 46) {
         extraBolus = 40 * usedBW / 100
         changingRate = Math.round(2 * Number(usedBW) / 100 + Number(currRateH.value))
 
-    } else if (aptt.value < 70) {
+    } else if (aptt.value < 71) {
         changingRate = "No Change"
 
-    } else if (aptt.value < 90) {
+    } else if (aptt.value < 91) {
         changingRate = Math.round(Number(currRateH.value) - 2 * Number(usedBW) / 100)
 
     } else {
