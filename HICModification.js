@@ -11,7 +11,7 @@ const gender = document.querySelector("#gender")
 
 
 function usedBodyWeight() {
-    let BMI = bodyWeight.value / (height.value / 100)
+    let BMI = bodyWeight.value / (Math.pow(height.value/100,2))
     let IBW = (gender.value == "M") ? (50 + (2.3 * ((height.value / 2.5) - 60))) : (45 + (2.3 * ((height.value / 2.5) - 60)))
     if (BMI < 40) {
         return bodyWeight.value
@@ -72,21 +72,21 @@ function HICModificationEvent() {
     }
     if (aptt.value < 35) {
         extraBolus = 80 * usedBW / 100
-        changingRate = Math.round(4 * usedBW / 100 + currRateH.value)
+        changingRate = Math.round(4 * Number(usedBW) / 100 + Number(currRateH.value))
 
     } else if (aptt.value < 45) {
         extraBolus = 40 * usedBW / 100
-        changingRate = Math.round(4 * usedBW / 100 + currRateH.value)
+        changingRate = Math.round(2 * Number(usedBW) / 100 + Number(currRateH.value))
 
     } else if (aptt.value < 70) {
         changingRate = "No Change"
 
     } else if (aptt.value < 90) {
-        changingRate = Math.round(currRateH.value - 2 * usedBW / 100)
+        changingRate = Math.round(Number(currRateH.value) - 2 * Number(usedBW) / 100)
 
     } else {
 
-        changingRate = "Stop infusion for 1 hour then resume by " + Math.round(currRateH.value - 3 * usedBW / 100)
+        changingRate = "Stop infusion for 1 hour then resume by " + Math.round(Number(currRateH.value) - 3 * Number(usedBW) / 100)
 
     }
 

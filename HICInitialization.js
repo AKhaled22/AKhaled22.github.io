@@ -2,8 +2,8 @@
 ///////////////////////////////
 const bodyWeight = document.querySelector(".bWeight")
 const height = document.querySelector(".heightt")
-const aptt = document.querySelector(".aptt")
-const currRateH = document.querySelector(".currRateH")
+// const aptt = document.querySelector(".aptt")
+// const currRateH = document.querySelector(".currRateH")
 const calcInitButt = document.querySelector(".HICInitializationbutton")
 
 const gender = document.querySelector("#gender")
