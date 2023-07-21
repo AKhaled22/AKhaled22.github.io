@@ -40,25 +40,10 @@ function HICInitializationEvent() {
     } else {
         height.style.borderColor = ""
     }
-    if (!aptt.value) {
-        aptt.style.borderColor = "red"
-        x = 1
-    } else {
-        aptt.style.borderColor = ""
-
-    }
+    
     const warning = document.querySelector(".OyEIQ")
 
-    if (!currRateH.value || currRateH.value<1 || currRateH.value>20) {
-        currRateH.style.borderColor = "red"
-        x = 1
-        if(currRateH.value>20){
-            warning.style.display = "flex"
-        }
-    } else {
-        currRateH.style.borderColor = ""
-        warning.style.display = "none"
-    }
+
     if (x == 1) {
         iBoluselem.textContent = ""
         irateelem.textContent = ""

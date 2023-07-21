@@ -208,6 +208,10 @@ a {
     justify-content: center;
 }
 
+.initResults{
+    margin-right: 3rem;
+}
+
 @media screen and (max-width: 768px) {
     .navbar {
         flex-wrap: wrap;
@@ -281,6 +285,10 @@ a {
 
     .dropdownList {
         width:80%;
+    }
+
+    .initResults{
+        margin-right: 0;
     }
 
 }
