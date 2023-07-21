@@ -111,7 +111,7 @@ function maintetnanceEvent() {
     let differenceCBG = currCBG - prevCBG
     let y = 0
     if (currCBG < 100) {
-        resultsElement.textContent = "DC insulin and give 100 mL D10, recheck every 15 minutes"
+        resultsElement.textContent = "DC insulin and give 100 mL D10, recheck every 15 minutes, when CBG > 100 mg%, wait for 1 hour and resume insulin by " + 0.5*currRateMaint.value + " m/hr"
 
     } else
         if (currCBG >= 100 && currCBG <= 139) {
@@ -124,14 +124,19 @@ function maintetnanceEvent() {
                 resultsElement.textContent = "Decrease rate to " + (y) + " ml/hr"
 
             } else {
-                resultsElement.textContent = "DC insulin -> CBG/30 min -> when CBG > 140 mg/dL -> restart at rate =  " + (roundHalf(0.75 * currRate)) + " ml/hr"
+                resultsElement.textContent = "DC insulin -> CBG/30 min -> when CBG > 140 mg/dL -> restart at rate =  " + (roundHalf(0.50 * currRate)) + " ml/hr"
 
             }
 
         } else if (currCBG == 140) {
             if (differenceCBG > 40) {
                 y = (Number(currRate) + delta)
-                resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                if(y<=20){
+                    resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                }else{
+                    resultsElement.textContent = "New rate is greater than 20 ml/hr, please contact relevant physician"
+
+                }
             } else if (differenceCBG >= -20) {
                 resultsElement.textContent = "No Change"
 
@@ -152,11 +157,21 @@ function maintetnanceEvent() {
 
             if (differenceCBG > 60) {
                 y = (Number(currRate) + 2 * delta)
-                resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                if(y<=20){
+                    resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                }else{
+                    resultsElement.textContent = "New rate is greater than 20 ml/hr, please contact relevant physician"
+
+                }
 
             } else if (differenceCBG >= 0) {
                 y = (Number(currRate) + delta)
-                resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                if(y<=20){
+                    resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                }else{
+                    resultsElement.textContent = "New rate is greater than 20 ml/hr, please contact relevant physician"
+
+                }
 
 
             } else if (differenceCBG >= -40) {
@@ -178,11 +193,21 @@ function maintetnanceEvent() {
         } else {
             if (differenceCBG > 0) {
                 y = (Number(currRate) + 2 * delta)
-                resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                if(y<=20){
+                    resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                }else{
+                    resultsElement.textContent = "New rate is greater than 20 ml/hr, please contact relevant physician"
+
+                }
 
             } else if (differenceCBG >= -20) {
                 y = (Number(currRate) + delta)
-                resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                if(y<=20){
+                    resultsElement.textContent = "Increase rate to " + y + " ml/hr"
+                }else{
+                    resultsElement.textContent = "New rate is greater than 20 ml/hr, please contact relevant physician"
+
+                }
 
 
             } else if (differenceCBG >= -60) {
