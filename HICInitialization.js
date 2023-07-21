@@ -11,7 +11,7 @@ const gender = document.querySelector("#gender")
 
 
 function usedBodyWeight() {
-    let BMI = bodyWeight.value / (height.value / 100)
+    let BMI = bodyWeight.value / (Math.pow(height.value/100,2))
     let IBW = (gender.value == "M") ? (50 + (2.3 * ((height.value / 2.5) - 60))) : (45 + (2.3 * ((height.value / 2.5) - 60)))
     if (BMI < 40) {
         return bodyWeight.value
