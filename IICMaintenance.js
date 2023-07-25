@@ -148,7 +148,7 @@ function maintetnanceEvent() {
 
             } else {
                 y = (Number(currRate) - 2 * delta)
-                resultsElement.textContent = "Hold infusion, check CBG every 30 minutes, when CBG > 140 ml/dL restart rate by " + y + " ml/hr"
+                resultsElement.textContent = "DC insulin, repeat CBG for every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr"
 
 
             }
@@ -184,8 +184,8 @@ function maintetnanceEvent() {
 
 
             } else {
-                y = (Number(currRate) - delta)
-                resultsElement.textContent = "Hold infusion, check CBG every 30 minutes, when CBG > 140 ml/dL restart rate by " + y + " ml/hr"
+                y = (Number(currRate) - 2* delta)
+                resultsElement.textContent = "DC insulin, repeat CBG for every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr"
 
 
             }
@@ -221,7 +221,7 @@ function maintetnanceEvent() {
 
             } else {
                 y = (Number(currRate) - 2 * delta)
-                resultsElement.textContent = "Hold infusion, check CBG every 30 minutes, when CBG > 140 ml/dL restart rate by " + y + " ml/hr"
+                resultsElement.textContent = "DC insulin, repeat CBG for every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr"
 
 
             }
