@@ -93,7 +93,7 @@ function maintetnanceEvent() {
     }
 
     const warning = document.querySelector(".OyEIQ")
-    if (!currRateMaint.value || currRateMaint.value < 1 || currRateMaint.value > 20) {
+    if (!currRateMaint.value || currRateMaint.value < 0.5 || currRateMaint.value > 20) {
         currRateMaint.style.borderColor = "red"
         x = 1
         if (currRateMaint.value > 20) {
@@ -148,7 +148,7 @@ function maintetnanceEvent() {
 
             } else {
                 y = (Number(currRate) - 2 * delta)
-                resultsElement.textContent = "DC insulin, repeat CBG for every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr"
+                resultsElement.textContent = "DC insulin, repeat CBG every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr"
 
 
             }
@@ -185,7 +185,7 @@ function maintetnanceEvent() {
 
             } else {
                 y = (Number(currRate) - 2* delta)
-                resultsElement.textContent = "DC insulin, repeat CBG for every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr"
+                resultsElement.textContent = "DC insulin, repeat CBG every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr"
 
 
             }
@@ -221,7 +221,7 @@ function maintetnanceEvent() {
 
             } else {
                 y = (Number(currRate) - 2 * delta)
-                resultsElement.textContent = "DC insulin, repeat CBG for every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr"
+                resultsElement.textContent = "DC insulin, repeat CBG every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr"
 
 
             }

@@ -54,7 +54,7 @@ function HICModificationEvent() {
     }
     const warning = document.querySelector(".OyEIQ")
 
-    if (!currRateH.value || currRateH.value<1 || currRateH.value>20) {
+    if (!currRateH.value || currRateH.value<0.5 || currRateH.value>20) {
         currRateH.style.borderColor = "red"
         x = 1
         if(currRateH.value>20){
