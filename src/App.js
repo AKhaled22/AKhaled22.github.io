@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes , Navigate } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import {CalculatorsHome , HICInitialization , HICModification , IICInitiation , IICMaintenance , DKAInitiation , DKAModification} from './pages'
 import Navbarr from './Navbarr';
 import 'bootstrap/dist/css/bootstrap.min.css';
