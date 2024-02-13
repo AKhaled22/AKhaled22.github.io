@@ -50,13 +50,14 @@ const HICInitialization = () => {
     }
     function usedBodyWeight() {
       let BMI = values.bodyweight / (Math.pow(values.height / 100, 2))
-      let IBW = (values.gender == "M") ? (50 + (2.3 * ((values.height / 2.5) - 60))) : (45 + (2.3 * ((values.height / 2.5) - 60)))
-      if (BMI < 40) {
+      let IBW = (values.gender == "M") ? (50 + (2.3 * ((values.height - 152.4) * 0.393700787))) : (45.5 + (2.3 * ((values.height - 152.4) * 0.393700787)))
+
+      if (BMI < 30) {
         return values.bodyweight
 
+      } else {
+        return ((0.4 * (values.bodyweight - IBW)) + IBW)
       }
-
-      return ((0.4 * (values.bodyweight - IBW)) + IBW)
     }
 
     let usedBW = usedBodyWeight()
