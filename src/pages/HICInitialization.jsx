@@ -61,7 +61,7 @@ const HICInitialization = () => {
     }
 
     let usedBW = usedBodyWeight()
-    setInitBResult(Math.round(80 * usedBW / 100))
+    setInitBResult(Math.round((80 * usedBW / 100)/5)*5)
     setInitRResult(Math.round(18 * usedBW / 100))
 
 

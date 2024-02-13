@@ -85,7 +85,7 @@ const HICModification = () => {
 
     }
 
-    setExtraBolusR("Extra Bolus = " + Math.round(extraBolus))
+    setExtraBolusR("Extra Bolus = " + Math.round(extraBolus/5)*5)
     setChangingRateR("Changing Rate = " + (changingRate))
 
   }
