@@ -62,8 +62,13 @@ const IICMaintenance = () => {
 
     let differenceCBG = currCBG - prevCBG
     let y = 0
-    if (currCBG < 100) {
-      setResultsElement("DC insulin and give 100 mL D10, recheck every 15 minutes, when CBG > 140 mg%, resume insulin by " + 0.5 * currRate + " m/hr")
+    if (currCBG < 80) {
+      setResultsElement("DC insulin and give 100 mL D10, recheck every 15 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, resume insulin by " + 0.5 * currRate + " mL/hr")
+
+    }else if(currCBG<100){
+
+      setResultsElement("DC insulin and give 100 mL D10, recheck every 30 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, resume insulin by " + 0.5 * currRate + " mL/hr")
+
 
     } else
       if (currCBG >= 100 && currCBG <= 139) {
@@ -76,7 +81,7 @@ const IICMaintenance = () => {
           setResultsElement("Decrease rate to " + (y) + " ml/hr")
 
         } else {
-          setResultsElement("DC insulin -> CBG/30 min -> when CBG > 140 mg/dL -> restart at rate =  " + (roundHalf(0.50 * currRate)) + " ml/hr")
+          setResultsElement("DC insulin -> CBG/30 min -> when CBG > 140 mg/dL -> restart at rate =  " + (roundHalf(0.50 * currRate)) + " ml/hr ( if CBG start to reincrease, check every 1 hour until > 140)" )
 
         }
 
@@ -100,7 +105,7 @@ const IICMaintenance = () => {
 
         } else {
           y = (Number(currRate) - 2 * delta)
-          setResultsElement("DC insulin, repeat CBG every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr")
+          setResultsElement("DC insulin, repeat CBG every 30 minutes, when it starts to reincrease and CBG >= 140 restart at rate = " + y + " ml/hr")
 
 
         }
@@ -137,7 +142,7 @@ const IICMaintenance = () => {
 
         } else {
           y = (Number(currRate) - 2 * delta)
-          setResultsElement("DC insulin, repeat CBG every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr")
+          setResultsElement("DC insulin, repeat CBG every 30 minutes, when it starts to reincrease and CBG >= 140 restart at rate = " + y + " ml/hr")
 
 
         }
@@ -173,7 +178,7 @@ const IICMaintenance = () => {
 
         } else {
           y = (Number(currRate) - 2 * delta)
-          setResultsElement("DC insulin, repeat CBG every 30 minutes, when it starts to reincrease restart at rate = " + y + " ml/hr")
+          setResultsElement("DC insulin, repeat CBG every 30 minutes, when it starts to reincrease and CBG >= 140 restart at rate = " + y + " ml/hr")
 
 
         }
@@ -208,7 +213,7 @@ const IICMaintenance = () => {
     <div>
       <div id="inst">
         <div class="instructions">
-          Initiate insulin infusion if 2 consecutive CBG more than 180 mg/dL
+          Initiate insulin infusion if more than 180 mg/dL in a diabetic patient
         </div>
         <div class="instructions">
           Add 50 IU insulin + 50 cc Normal saline
