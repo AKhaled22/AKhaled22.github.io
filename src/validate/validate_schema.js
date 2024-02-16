@@ -35,5 +35,8 @@ export const validateSchema = {
     .number()
     .required("Current HCO3 is required")
   ,
+  currentratee: yup
+  .number().required("Current Rate is required").min(0.5, "Invalid amount"),
+
  
 };

@@ -15,7 +15,7 @@ const Validation = (type) => {
       height: validateSchema["height"],
       gender: validateSchema["gender"],
       aptt: validateSchema["aptt"],
-      currentrate: validateSchema["currentrate"],
+      currentratee: validateSchema["currentratee"],
 
     },
 

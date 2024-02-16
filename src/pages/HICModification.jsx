@@ -29,7 +29,7 @@ const HICModification = () => {
     {
       label: "Current Rate (m/hr)",
       type: "number",
-      name: "currentrate"
+      name: "currentratee"
     },
     {
       label: "Gender (M/F)",
@@ -67,21 +67,21 @@ const HICModification = () => {
 
     if (values.aptt < 35) {
       extraBolus = 80 * usedBW / 100
-      changingRate = Math.round(4 * Number(usedBW) / 100 + Number(values.currentrate))
+      changingRate = Math.round(4 * Number(usedBW) / 100 + Number(values.currentratee))
 
     } else if (values.aptt < 46) {
       extraBolus = 40 * usedBW / 100
-      changingRate = Math.round(2 * Number(usedBW) / 100 + Number(values.currentrate))
+      changingRate = Math.round(2 * Number(usedBW) / 100 + Number(values.currentratee))
 
     } else if (values.aptt < 71) {
       changingRate = "No Change"
 
     } else if (values.aptt < 91) {
-      changingRate = Math.round(Number(values.currentrate) - 2 * Number(usedBW) / 100)
+      changingRate = Math.round(Number(values.currentratee) - 2 * Number(usedBW) / 100)
 
     } else {
 
-      changingRate = "Stop infusion for 1 hour then resume by " + Math.round(Number(values.currentrate) - 3 * Number(usedBW) / 100)
+      changingRate = "Stop infusion for 1 hour then resume by " + Math.round(Number(values.currentratee) - 3 * Number(usedBW) / 100)
 
     }
 
