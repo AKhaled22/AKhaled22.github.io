@@ -63,11 +63,11 @@ const IICMaintenance = () => {
     let differenceCBG = currCBG - prevCBG
     let y = 0
     if (currCBG < 80) {
-      setResultsElement("DC insulin and give 100 mL D10, recheck every 15 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, resume insulin by " + 0.5 * currRate + " mL/hr")
+      setResultsElement("DC insulin and give 100 mL D10, recheck every 15 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, " + Math.round(currRate)*0.5 < 0.5 ? "inform responsible doctor": "resume insulin by "+ Math.round(currRate)*0.5 + " mL/hr")
 
     }else if(currCBG<100){
 
-      setResultsElement("DC insulin and give 100 mL D10, recheck every 30 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, resume insulin by " + 0.5 * currRate + " mL/hr")
+      setResultsElement("DC insulin and give 100 mL D10, recheck every 30 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, "  + Math.round(currRate)*0.5 < 0.5 ? "inform responsible doctor": "resume insulin by "+ Math.round(currRate)*0.5 + " mL/hr")
 
 
     } else
