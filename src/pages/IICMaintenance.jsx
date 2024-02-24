@@ -63,11 +63,11 @@ const IICMaintenance = () => {
     let differenceCBG = currCBG - prevCBG
     let y = 0
     if (currCBG < 80) {
-      setResultsElement("DC insulin and give 100 mL D10, recheck every 15 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, " + currRate*0.5 < 0.5 ? "inform responsible doctor": ("resume insulin by "+ Math.round(currRate)*0.5 + " mL/hr"))
+      setResultsElement("DC insulin and give 100 mL D10, recheck every 15 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, " + (currRate*0.5 < 0.5 ? "inform responsible doctor": ("resume insulin by "+ Math.round(currRate)*0.5 + " mL/hr")))
 
     }else if(currCBG<100){
 
-      setResultsElement("DC insulin and give 100 mL D10, recheck every 30 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, "  + currRate*0.5 < 0.5 ? "inform responsible doctor": ("resume insulin by "+ Math.round(currRate)*0.5 + " mL/hr"))
+      setResultsElement("DC insulin and give 100 mL D10, recheck every 30 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, "  + (currRate*0.5 < 0.5 ? "inform responsible doctor": ("resume insulin by "+ Math.round(currRate)*0.5 + " mL/hr")))
 
 
     } else
@@ -81,7 +81,7 @@ const IICMaintenance = () => {
           setResultsElement(y<0.5 ? "Inform responsible doctor" : "Decrease rate to " + (y) + " ml/hr")
 
         } else {
-          setResultsElement("DC insulin -> CBG/30 min -> when CBG > 140 mg/dL -> " + (0.50 * currRate<0.5) ? "inform responsible doctor" :"restart at rate = " + (roundHalf(0.50 * currRate) + " ml/hr ( if CBG start to reincrease, check every 1 hour until > 140)" ))
+          setResultsElement("DC insulin -> CBG/30 min -> when CBG > 140 mg/dL -> " + (0.50 * currRate<0.5) ? "inform responsible doctor" :"restart at rate = " + ((roundHalf(0.50 * currRate) + " ml/hr ( if CBG start to reincrease, check every 1 hour until > 140)" )))
 
         }
 
@@ -105,7 +105,7 @@ const IICMaintenance = () => {
 
         } else {
           y = (Number(currRate) - 2 * delta)
-          setResultsElement(y<0.5 ? "Inform responsible doctor" :"DC insulin, repeat CBG every 30 minutes, when it starts to reincrease and CBG >= 140 restart at rate = " + y + " ml/hr")
+          setResultsElement("DC insulin, repeat CBG every 30 minutes, when it starts to reincrease and CBG >= 140 " + (y<0.5 ? "Inform responsible doctor" : ("restart at rate = " + y + " ml/hr")))
 
 
         }
@@ -142,7 +142,7 @@ const IICMaintenance = () => {
 
         } else {
           y = (Number(currRate) - 2 * delta)
-          setResultsElement(y<0.5 ? "Inform responsible doctor" :"DC insulin, repeat CBG every 30 minutes, when it starts to reincrease and CBG >= 140 restart at rate = " + y + " ml/hr")
+          setResultsElement("DC insulin, repeat CBG every 30 minutes, when it starts to reincrease and CBG >= 140 " +  (y<0.5 ? "Inform responsible doctor" : ("restart at rate = " + y + " ml/hr")))
 
 
         }
@@ -178,7 +178,7 @@ const IICMaintenance = () => {
 
         } else {
           y = (Number(currRate) - 2 * delta)
-          setResultsElement(y<0.5 ? "Inform responsible doctor" :"DC insulin, repeat CBG every 30 minutes, when it starts to reincrease and CBG >= 140 restart at rate = " + y + " ml/hr")
+          setResultsElement("DC insulin, repeat CBG every 30 minutes, when it starts to reincrease and CBG >= 140 "  + (y<0.5 ? "Inform responsible doctor" : ("restart at rate = " + y + " ml/hr")))
 
 
         }
