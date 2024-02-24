@@ -27,12 +27,12 @@ function Navbarr() {
              
 
             </NavDropdown>
-            <NavDropdown title="DKA Insulin Infusion Calculator" id="basic-nav-dropdown">
+            {/* <NavDropdown title="DKA Insulin Infusion Calculator" id="basic-nav-dropdown">
               <Link to="/DKAInitiation" data-rr-ui-dropdown-item="" className='dropdown-item'>Initiation</Link>
               <Link to="/DKAModification" data-rr-ui-dropdown-item="" className='dropdown-item'>Modification</Link>
              
 
-            </NavDropdown>
+            </NavDropdown> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

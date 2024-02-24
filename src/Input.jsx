@@ -18,6 +18,7 @@ const Input = ({
   radioOneChecked,
   radioTwoChecked,
   selected,
+  style,
 }) => {
 
   return (
@@ -111,7 +112,7 @@ const Input = ({
         // />
         <Row className="mb-3">
           <Form.Group md="4">
-            <Form.Label>{label}</Form.Label>
+            <Form.Label style={style}>{label}</Form.Label>
             {/* <InputGroup hasValidation>
             <InputGroup.Text id="inputGroupPrepend">@</InputGroup.Text> */}
             <Form.Control

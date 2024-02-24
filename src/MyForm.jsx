@@ -64,6 +64,7 @@ const MyForm = ({
                   radioOneChecked={inp.radioOneChecked}
                   radioTwoChecked={inp.radioTwoChecked}
                   selected={inp.selected}
+                  style= {inp.style}
                 />
               ))}
             {/* {console.log(values)} */}

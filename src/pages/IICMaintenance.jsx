@@ -191,7 +191,8 @@ const IICMaintenance = () => {
     {
       label: "Previous CBG (mg%)",
       type: "number",
-      name: "previouscbg"
+      name: "previouscbg",
+      style: {color: "red" }
 
     },
     {
