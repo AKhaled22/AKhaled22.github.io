@@ -16,7 +16,7 @@ const IICInitiation = () => {
 
   function handleSubmit(values, errors) {
 
-    if(errors){
+    if (errors) {
       setInitbResult("")
       setInitrResult("")
       return
@@ -35,7 +35,7 @@ const IICInitiation = () => {
 
     } else {
       setInitrResult(x)
-      setInitbResult(Math.floor((values.currentcbg / 100)/0.5)*0.5)
+      setInitbResult(Math.floor((values.currentcbg / 100) / 0.5) * 0.5)
 
     }
 
@@ -57,7 +57,7 @@ const IICInitiation = () => {
     <div>
       <div id="inst">
         <div class="instructions">
-          Initiate insulin infusion if 2 consecutive CBG more than 180 mg/dL
+          Initiate insulin infusion if more than 180 mg/dL in a diabetic patient
         </div>
         <div class="instructions">
           Add 50 IU insulin + 50 cc Normal saline
