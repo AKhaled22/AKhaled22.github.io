@@ -35,7 +35,7 @@ const IICInitiation = () => {
 
     } else {
       setInitrResult(x)
-      setInitbResult(Math.round((values.currentcbg / 100)/5)*5)
+      setInitbResult(Math.floor((values.currentcbg / 100)/0.5)*0.5)
 
     }
 
