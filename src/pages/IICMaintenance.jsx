@@ -81,7 +81,7 @@ const IICMaintenance = () => {
           setResultsElement(y<0.5 ? "Inform responsible doctor" : "Decrease rate to " + (y) + " ml/hr")
 
         } else {
-          setResultsElement("DC insulin -> CBG/30 min -> when CBG > 140 mg/dL -> " + (0.50 * currRate<0.5) ? "inform responsible doctor" :"restart at rate = " + ((roundHalf(0.50 * currRate) + " ml/hr ( if CBG start to reincrease, check every 1 hour until > 140)" )))
+          setResultsElement("DC insulin -> CBG/30 min -> when CBG > 140 mg/dL -> " + ((0.50 * currRate<0.5) ? "inform responsible doctor" :"restart at rate = " + ((roundHalf(0.50 * currRate) + " ml/hr ( if CBG start to reincrease, check every 1 hour until > 140)" ))))
 
         }
 
