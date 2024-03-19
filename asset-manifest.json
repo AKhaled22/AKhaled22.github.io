@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.3cfcf13f.css",
-    "main.js": "/static/js/main.44e0baeb.js",
+    "main.js": "/static/js/main.5fbdea84.js",
     "static/js/453.dd4f0b3b.chunk.js": "/static/js/453.dd4f0b3b.chunk.js",
     "static/media/vector-calculator-icon.jpg": "/static/media/vector-calculator-icon.cefea38b171f14d5b4f7.jpg",
     "index.html": "/index.html",
     "main.3cfcf13f.css.map": "/static/css/main.3cfcf13f.css.map",
-    "main.44e0baeb.js.map": "/static/js/main.44e0baeb.js.map",
+    "main.5fbdea84.js.map": "/static/js/main.5fbdea84.js.map",
     "453.dd4f0b3b.chunk.js.map": "/static/js/453.dd4f0b3b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3cfcf13f.css",
-    "static/js/main.44e0baeb.js"
+    "static/js/main.5fbdea84.js"
   ]
 }
