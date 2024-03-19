@@ -41,11 +41,9 @@ const HICInitialization = () => {
   ]
 
   const handleSubmit = (values, errors) => {
-    console.log(values, errors)
     if (errors) {
       setInitBResult(" ")
       setInitRResult(" ")
-      console.log(initBResult);
       return
     }
     function usedBodyWeight() {

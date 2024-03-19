@@ -19,7 +19,6 @@ function Navbarr() {
               <Link to="/IICInitiation" data-rr-ui-dropdown-item="" className='dropdown-item'>Initiation</Link>
               <Link to="/IICMaintenance" data-rr-ui-dropdown-item="" className='dropdown-item'>Maintenance</Link>
 
-              {/* <a href="#action/3.1" data-rr-ui-dropdown-item="" class="dropdown-item">Initiation</a> */}
             </NavDropdown>
             <NavDropdown title="Heparin Infusion Calculator" id="basic-nav-dropdown">
               <Link to="/HICInitialization" data-rr-ui-dropdown-item="" className='dropdown-item'>Initialization</Link>

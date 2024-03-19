@@ -41,7 +41,6 @@ const HICModification = () => {
   ]
 
   const handleSubmit = (values, errors) => {
-    console.log(values);
 
     if (errors) {
       setChangingRateR(" ")
@@ -109,10 +108,10 @@ const HICModification = () => {
       />
 
 
-      <div class="resultsheadline">Results: </div>
+      <div className="resultsheadline">Results: </div>
 
-      <div class="resultsHIC">{changingRateR}</div>
-      <div class="resultsHIC">{extraBolusR}</div>
+      <div className="resultsHIC">{changingRateR}</div>
+      <div className="resultsHIC">{extraBolusR}</div>
 
 
 

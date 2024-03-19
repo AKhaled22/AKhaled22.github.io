@@ -33,7 +33,6 @@ const MyForm = ({
           // Your submit logic can go here
           // For now, let's just log the form values
           // props.handlePay()
-          console.log(errors);
           handleSub(values);
           // setSubmitting(false);
         }}

@@ -55,7 +55,6 @@ const DKAModification = () => {
   ]
 
   const handleSubmit = (values, errors) => {
-    console.log(values, errors)
     if (errors) {
       setResult("")
       setResult2("")
@@ -111,13 +110,13 @@ const DKAModification = () => {
   return (
     <div>
       <div id="inst">
-        <div class="instructions">
+        <div className="instructions">
           Add 50 IU insulin + 50 cc Normal saline
         </div>
-        <div class="instructions">
+        <div className="instructions">
           Before connecting, flush 20 cc infusion through all tubing
         </div>
-        <div class="instructions">
+        <div className="instructions">
           Prepare 500 ml of D 10 in the patient's room
         </div>
 
@@ -130,9 +129,9 @@ const DKAModification = () => {
         handleSub={handleSubmit}
       />
 
-      <div class="resultsheadline">Results: </div>
-      <div class="resultsIIC" style={{ "color": "green" }}>{result}</div>
-      <div class="resultsIIC" style={{ "color": "green" }}>{result2}</div>
+      <div className="resultsheadline">Results: </div>
+      <div className="resultsIIC" style={{ "color": "green" }}>{result}</div>
+      <div className="resultsIIC" style={{ "color": "green" }}>{result2}</div>
 
 
 
