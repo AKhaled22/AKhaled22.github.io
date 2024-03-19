@@ -71,7 +71,7 @@ const IICMaintenance = () => {
 
 
     } else
-      if (currCBG >= 100 && currCBG <= 139) {
+      if (currCBG >= 100 && currCBG <= 159) {
         if (differenceCBG > 0) {
           setResultsElement("No Change")
 
@@ -85,7 +85,7 @@ const IICMaintenance = () => {
 
         }
 
-      } else if (currCBG == 140) {
+      } else if (currCBG == 160) {
         if (differenceCBG > 40) {
           y = (Number(currRate) + delta)
           if (y <= 20) {
@@ -183,6 +183,9 @@ const IICMaintenance = () => {
 
         }
 
+      }
+      if(currCBG>300){
+        setResultsElement(resultsElement+' Check Acetone in Urine')
       }
 
   }
