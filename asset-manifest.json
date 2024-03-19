@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/AKhaled22.github.io/static/css/main.3cfcf13f.css",
-    "main.js": "/AKhaled22.github.io/static/js/main.14337e8c.js",
-    "static/js/453.dd4f0b3b.chunk.js": "/AKhaled22.github.io/static/js/453.dd4f0b3b.chunk.js",
-    "static/media/vector-calculator-icon.jpg": "/AKhaled22.github.io/static/media/vector-calculator-icon.cefea38b171f14d5b4f7.jpg",
-    "index.html": "/AKhaled22.github.io/index.html",
-    "main.3cfcf13f.css.map": "/AKhaled22.github.io/static/css/main.3cfcf13f.css.map",
-    "main.14337e8c.js.map": "/AKhaled22.github.io/static/js/main.14337e8c.js.map",
-    "453.dd4f0b3b.chunk.js.map": "/AKhaled22.github.io/static/js/453.dd4f0b3b.chunk.js.map"
+    "main.css": "/static/css/main.3cfcf13f.css",
+    "main.js": "/static/js/main.44e0baeb.js",
+    "static/js/453.dd4f0b3b.chunk.js": "/static/js/453.dd4f0b3b.chunk.js",
+    "static/media/vector-calculator-icon.jpg": "/static/media/vector-calculator-icon.cefea38b171f14d5b4f7.jpg",
+    "index.html": "/index.html",
+    "main.3cfcf13f.css.map": "/static/css/main.3cfcf13f.css.map",
+    "main.44e0baeb.js.map": "/static/js/main.44e0baeb.js.map",
+    "453.dd4f0b3b.chunk.js.map": "/static/js/453.dd4f0b3b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3cfcf13f.css",
-    "static/js/main.14337e8c.js"
+    "static/js/main.44e0baeb.js"
   ]
 }
