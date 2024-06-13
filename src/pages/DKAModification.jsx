@@ -36,16 +36,7 @@ const DKAModification = () => {
       type: "number",
       name: "currentcbg"
     },
-    {
-      label: " Previous HCO3",
-      type: "number",
-      name: "previoushco3"
-    },
-    {
-      label: " Current HCO3",
-      type: "number",
-      name: "currenthco3"
-    },
+
     {
       label: "Current Rate (m/hr)",
       type: "number",
@@ -61,38 +52,30 @@ const DKAModification = () => {
       return
     }
 
-    if(values.currentcbg < 250){
-      setResult(`Decrease rate to ${0.05 * values.bodyweight} ml/hr`)
+    if (values.currentcbg < 250) {
+      setResult(`Decrease rate to ${Math.floor(0.05 * values.bodyweight)} ml/hr`)
       setResult2("Add D 10 rate 125 ml/hr ( adjust rate of NaCl )")
       return
     }
 
     // let currCbg = values.currentcbg
     // let prevCbg =  values.previouscbg
-    let diffHco3 = values.currenthco3 - values.previoushco3
+    // let diffHco3 = values.currenthco3 - values.previoushco3
     let diffCbg = values.currentcbg - values.previouscbg
 
-    if(diffCbg > -50){
+    if (diffCbg > -50) {
 
-      setResult(`Modify rate to ${values.currentrate+1} ml/hr`)
+      setResult(`Modify rate to ${values.currentrate * 2} ml/hr`)
 
-    }else if(diffCbg > -70 ){
-      if(diffHco3 > -3){
+    } else if (diffCbg > -100) {
 
-        setResult(`Modify rate to ${values.currentrate+1} ml/hr`)
-
-        
-
-      }else{
-
-        setResult("No change")
-
-      }
-
-    }else{
-      setResult(`Modify rate to ${values.currentrate-1} ml/hr`)
+      setResult("No change")
 
     }
+    //  else {
+    //   setResult(`Modify rate to ${values.currentrate - 1} ml/hr`)
+
+    // }
     setResult2("")
 
 

@@ -37,8 +37,6 @@ const Validation = (type) => {
       bodyweight: validateSchema["bodyweight"],
       previouscbg: validateSchema["previouscbg"],
       currentcbg: validateSchema["currentcbg"],
-      previoushco3: validateSchema["previoushco3"],
-      currenthco3: validateSchema["currenthco3"],
       currentrate: validateSchema["currentrate"],
     },
   
