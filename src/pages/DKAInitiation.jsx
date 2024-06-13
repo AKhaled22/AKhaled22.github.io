@@ -31,7 +31,7 @@ const DKAInitiation = () => {
       return
     }
 
-   setResult(Math.round(values.bodyweight)/10 >= 15 ? 15 : Math.round(values.bodyweight)/10 )
+   setResult(Math.round(values.bodyweight)/10 >= 15 ? 15 : Math.round(values.bodyweight/5)/2 )
 
 
 
