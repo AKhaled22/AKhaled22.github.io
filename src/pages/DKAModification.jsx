@@ -52,7 +52,7 @@ const DKAModification = () => {
       return
     }
 
-    if (values.currentcbg < 250) {
+    if (values.currentcbg <= 250) {
       setResult(`Decrease rate to ${Math.floor(0.05 * values.bodyweight)} ml/hr`)
       setResult2("Add D 10 rate 125 ml/hr ( adjust rate of NaCl )")
       return
