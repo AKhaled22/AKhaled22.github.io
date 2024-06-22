@@ -39,6 +39,15 @@ const Validation = (type) => {
       currentcbg: validateSchema["currentcbg"],
       currentrate: validateSchema["currentrate"],
     },
+    Login: {
+      email: validateSchema["email"],
+      password: validateSchema["password"],
+    },
+    Register: {
+      email: validateSchema["email"],
+      password: validateSchema["password"],
+      confirmPassword: validateSchema["confirmPassword"],
+    },
   
   
   };

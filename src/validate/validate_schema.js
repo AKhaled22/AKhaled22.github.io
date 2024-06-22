@@ -5,6 +5,9 @@ import * as yup from "yup";
 
 
 export const validateSchema = {
+  email: yup.string().email().required("Email is required"),
+  password: yup.string().required("Password is required"),
+  confirmPassword: yup.string().oneOf([yup.ref("password"), null], "Passwords must match"),
   bodyweight: yup
     .number()
     .required("Body weight is required")

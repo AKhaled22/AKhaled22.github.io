@@ -14,7 +14,8 @@ const MyForm = ({
   buttText,
   type,
   handleSub,
- 
+  className
+
 }) => {
   const validationSchema = Validation(type);
   // console.log("initVal", initVal);
@@ -25,7 +26,7 @@ const MyForm = ({
   // console.log(validationSchema);
   // console.log(inputArr);
   return (
-    <div className="myForm">
+    <div className={"myForm " + className}>
       <Formik
         validationSchema={validationSchema}
         // onSubmit={console.log}
@@ -40,7 +41,7 @@ const MyForm = ({
         initialValues={{}}
       >
         {({ handleSubmit, handleChange, values, touched, errors }) => (
-          <Form noValidate onSubmit={handleSubmit} onChange={()=>{handleSub(values,1)}} >
+          <Form noValidate onSubmit={handleSubmit} onChange={() => { handleSub(values, 1) }} className={`${(type == 'Login' || type == 'Register') && 'w-100'}`}  >
             <h3 className="init">{title}</h3>
             {inputArr &&
               inputArr.map((inp, i) => (
@@ -63,17 +64,17 @@ const MyForm = ({
                   radioOneChecked={inp.radioOneChecked}
                   radioTwoChecked={inp.radioTwoChecked}
                   selected={inp.selected}
-                  style= {inp.style}
+                  style={inp.style}
                 />
               ))}
             {/* {console.log(values)} */}
 
 
-            <Button type="submit"  className="blackbutt">{buttText}</Button>
+            <Button type="submit" className="blackbutt">{buttText}</Button>
 
 
 
-            
+
 
           </Form>
 

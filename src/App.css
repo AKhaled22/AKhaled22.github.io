@@ -1,28 +1,22 @@
-
 body {
   height: 100%;
   margin: 0;
   background-color: #fff;
-  color: rgba(0, 0, 0, .87);
+  color: rgba(0, 0, 0, 0.87);
   font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.5;
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "calt";
-
-
 }
 
 .navbar {
-
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
-
-
 }
 
 .myForm {
@@ -38,7 +32,6 @@ body {
   /* margin-left: 15px; */
   /* width: 50px; */
   /* margin-bottom: 50%; */
-
 }
 
 .calcs {
@@ -46,7 +39,6 @@ body {
   flex-direction: row;
   justify-content: space-evenly;
   width: 95%;
-
 }
 
 .hovergreen:hover {
@@ -83,13 +75,10 @@ a {
   border-radius: 40cm !important;
   padding: 6px 15px 6px 15px !important;
   border: 1px solid black !important;
-
-
 }
 
 .blackbutt:hover {
   opacity: 0.7;
-
 }
 
 .centeredbutton {
@@ -107,14 +96,14 @@ a {
   margin-top: 1.5rem;
 }
 
-.resultsHIC ,.resultsIIC {
+.resultsHIC,
+.resultsIIC {
   color: green;
   width: 100%;
   font-size: 2rem;
   font-weight: 400;
   text-align: center;
   margin: 0.5rem;
-
 }
 
 .labels {
@@ -129,7 +118,6 @@ a {
   width: 100%;
   margin-top: 2rem;
   margin-bottom: 2rem;
-
 }
 
 .instructions {
@@ -150,7 +138,6 @@ a {
 
 .margright27 {
   margin-right: 2.7rem;
-
 }
 
 .dropdownList {
@@ -165,7 +152,7 @@ a {
   border-radius: 5px;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
-.dropdownList:hover  .dropdown-options {
+.dropdownList:hover .dropdown-options {
   display: block;
 }
 
@@ -174,13 +161,13 @@ a {
   color: #000000;
   padding: 5px;
   text-decoration: none;
-  padding:20px 40px;
+  padding: 20px 40px;
 }
 
 .dropdown-options a:hover {
   color: #0a0a23;
   background-color: #ddd;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
 .SdBahf.Jj6Lae .OyEIQ {
@@ -195,94 +182,94 @@ a {
   color: red;
 }
 
-.EjBTad{
+.EjBTad {
   margin-right: 5px;
   margin-left: 5px;
 }
-
 
 .SdBahf .OyEIQ {
   /* color: #5f6368; */
   margin-top: 4px;
 }
 
-.rate{
+.rate {
   display: flex;
   justify-content: center;
 }
 
-.initResults{
+.initResults {
   margin-right: 3rem;
 }
 
-
-.radio{
+.radio {
   display: flex;
   /* justify-content: center; */
   align-items: center;
   gap: 5px;
 }
-
+@media screen and (min-width: 768px) {
+  .respForm {
+    width: 20rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .navbar {
-      flex-wrap: wrap;
-      padding: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
   }
 
   .imagcal {
-      height: 50px;
+    height: 50px;
   }
 
   .calcs {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .IIC,
   .HIC {
-      margin-left: 10px;
-      text-align: center;
+    margin-left: 10px;
+    text-align: center;
   }
 
   #initiation {
-      margin: 1rem;
+    margin: 1rem;
   }
 
   .currcbg input,
   .currcbg select {
-      width: 50%;
-      max-width: 100%;
+    width: 50%;
+    max-width: 100%;
   }
 
   .labels {
-      margin-bottom: 1rem;
-      margin-right: 0;
-      margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 0;
+    margin-top: 1rem;
   }
 
   .init,
   .maint {
-      /* margin: 0; */
+    /* margin: 0; */
   }
 
   .initbutton {
-      margin-left: 0;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+    margin-left: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   #inst {
-
-      margin: 0;
-      margin-top: 1.7rem;
-
+    margin: 0;
+    margin-top: 1.7rem;
   }
 
   .currcbg {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   /* .currCBGLabel{
@@ -290,16 +277,19 @@ a {
   } */
 
   .labelsResults {
-      margin-top: 1rem;
-      margin-right: 0;
+    margin-top: 1rem;
+    margin-right: 0;
   }
 
   .dropdownList {
-      width:80%;
+    width: 80%;
   }
 
-  .initResults{
-      margin-right: 0;
+  .initResults {
+    margin-right: 0;
   }
+}
 
+.pointer {
+  cursor: pointer;
 }
