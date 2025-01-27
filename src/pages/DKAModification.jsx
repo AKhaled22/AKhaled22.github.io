@@ -51,10 +51,22 @@ const DKAModification = () => {
       setResult2("")
       return
     }
-
+    if (values.currentcbg < 100) {
+      setResult(
+        "DC insulin and give 100 mL D10, recheck every 30 minutes, give 100 mL D10 again if still < 100. When CBG > 140 mg%, resume insulin by " + Math.round(values.currentrate) * 0.5 + " mL/hr")
+      return
+    }
     if (values.currentcbg <= 250) {
-      setResult(`Decrease rate to ${Math.floor(0.05 * values.bodyweight)} ml/hr`)
-      setResult2("Add D 10 rate 125 ml/hr ( adjust rate of NaCl )")
+      const newRate = Math.floor(0.05 * values.bodyweight)
+      if (newRate > 15) {
+        setResult("New rate is greater than 15 ml/hr, please contact relevant physician")
+        if (values.currentcbg > 300) {
+          setResult2("Check Acetone in Urine");
+        }
+      } else {
+        setResult(`Decrease rate to ${newRate} ml/hr`)
+        setResult2("Add D 10 rate 125 ml/hr ( adjust rate of NaCl )")
+      }
       return
     }
 
@@ -64,19 +76,32 @@ const DKAModification = () => {
     let diffCbg = values.currentcbg - values.previouscbg
 
     if (diffCbg > -50) {
+      const newRate = values.currentrate * 2
+      if (newRate > 15) {
+        setResult("New rate is greater than 15 ml/hr, please contact relevant physician")
 
-      setResult(`Modify rate to ${values.currentrate * 2} ml/hr`)
+        if (values.currentcbg > 300) {
+          setResult2("Check Acetone in Urine");
+        } else {
+          setResult2("")
+        }
+      } else {
+        setResult(`Modify rate to ${newRate} ml/hr`)
+        setResult2("")
+
+      }
 
     } else if (diffCbg > -100) {
 
       setResult("No change")
+      setResult2("")
+
 
     }
     //  else {
     //   setResult(`Modify rate to ${values.currentrate - 1} ml/hr`)
 
     // }
-    setResult2("")
 
 
 
